@@ -41,11 +41,11 @@ def duplicate_zeros(arr)
 
     while(a>=0 && a<b) #Since we are starting from the end, and while the original array length is within the range length of the kept_length array
        if arr[a]==0 # If a zero is found at position a
-          arr[b]=0 if b<=arr.length-1 # The number at position b is switched to 0 if b (the keptnumbers                                           # array length) is within the array size of the original array
-          arr[b-1]=0 if b-1<=arr.length-1 # This is creating the duplicate pair. Again, must the index                                           # be within the original array
+          arr[b]=0 if b<=arr.length-1 # The number at position b is switched to 0 if b (the keptnumbers array length) is within the array size of the original array
+          arr[b-1]=0 if b-1<=arr.length-1 # This is creating the duplicate pair. Again, must the index  be within the original array
           b-=2 # B is decreased by two since the array shift was by 2
        else
-          arr[b]=arr[a] if b<=arr.length-1 # If the element wasn't 0, then the array at position b is                                                  # overwritten with the element at position a if b is within the                                              # array length 
+          arr[b]=arr[a] if b<=arr.length-1 # If the element wasn't 0, then the array at position b is overwritten with the element at position a if b is within the array length 
           b-=1 # Only one shift, so the number is decreased by 1
        end
         a-=1 # Decrease by one as we did the iteration.
